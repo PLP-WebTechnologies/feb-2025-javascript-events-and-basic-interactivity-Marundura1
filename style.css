@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.slideshow {
+    position: relative;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    max-height: 400px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.tab-buttons {
+    margin-bottom: 10px;
+}
+
+.tab-btn {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.tab-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#category-filter {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+}
+
+.slide:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.enlarged {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
