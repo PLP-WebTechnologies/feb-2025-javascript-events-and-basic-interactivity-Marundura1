@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery & Contact System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Photo Gallery & Contact</h1>
+    </header>
+    <main>
+        <section id="welcome">
+            <h2 id="welcome-text">Welcome to Our Gallery!</h2>
+            <button id="toggle-welcome">Change Welcome</button>
+        </section>
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <input type="text" id="category-filter" placeholder="Type category (e.g., nature, city)">
+            <div class="slideshow">
+                <img src="https://via.placeholder.com/600x400?text=Nature" alt="Nature" class="slide active" data-category="nature">
+                <img src="https://via.placeholder.com/600x400?text=City" alt="City" class="slide" data-category="city">
+                <img src="https://via.placeholder.com/600x400?text=Portrait" alt="Portrait" class="slide" data-category="portrait">
+                <div class="controls">
+                    <button onclick="prevSlide()">Previous</button>
+                    <button onclick="nextSlide()">Next</button>
+                </div>
+            </div>
+        </section>
+        <section id="tabs">
+            <h2>Learn More</h2>
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab('about')">About</button>
+                <button class="tab-btn" onclick="openTab('services')">Services</button>
+            </div>
+            <div id="about" class="tab-content active">
+                <p>We are passionate photographers capturing the beauty of the world.</p>
+            </div>
+            <div id="services" class="tab-content">
+                <p>Offering portrait sessions, event photography, and more.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" novalidate>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="error" id="name-error"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error" id="email-error"></span>
+                </div>
+                <div>
+                    <label for="password">Password (min 8 chars, 1 number):</label>
+                    <input type="password" id="password" required>
+                    <span class="error" id="password-error"></span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>JS Assignment - May 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
